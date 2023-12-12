@@ -6,13 +6,11 @@ from pyspark.sql.functions import col, explode
 from pyspark.sql.types import StructType, StructField, StringType, ArrayType, IntegerType
 from schema import json_schema
 
-json_path = "small_data.json"
+json_path = "data.json"
 
 spark = SparkSession.builder.appName("MovieRatingRanges").getOrCreate()
 
 json_data = spark.read.option("multiline", "true").schema(json_schema).json(json_path)
-
-json_data.printSchema()
 
 # print("------------------------")
 # json_data.show(truncate=False)
