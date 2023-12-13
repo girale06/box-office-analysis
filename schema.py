@@ -6,29 +6,6 @@ company_type_schema = StructType([
     StructField("companyTypeName", StringType(), True)
 ])
 
-company_schema = StructType([
-    StructField("id", IntegerType(), True),
-    StructField("name", StringType(), True),
-    StructField("slug", StringType(), True),
-    StructField("nameTranslations", StringType(), True),
-    StructField("overviewTranslations", StringType(), True),
-    StructField("aliases", StringType(), True),
-    StructField("country", StringType(), True),
-    StructField("primaryCompanyType", IntegerType(), True),
-    StructField("activeDate", StringType(), True),
-    StructField("inactiveDate", StringType(), True),
-    StructField("companyType", company_type_schema, True),
-    StructField("parentCompany", StructType([
-        StructField("id", IntegerType(), True),
-        StructField("name", StringType(), True),
-        StructField("relation", StructType([
-            StructField("id", IntegerType(), True),
-            StructField("typeName", StringType(), True)
-        ]), True)
-    ]), True),
-    StructField("tagOptions", StringType(), True)
-])
-
 production_countries_schema = ArrayType(StructType([
     StructField("id", IntegerType(), True),
     StructField("country", StringType(), True),
@@ -95,13 +72,13 @@ json_schema = StructType([
     StructField("originalLanguage", StringType(), True),
     StructField("audioLanguages", ArrayType(StringType()), True),
     StructField("subtitleLanguages", ArrayType(StringType()), True),
-    StructField("studios", ArrayType([
+    StructField("studios", ArrayType(StructType([
         StructField("id", IntegerType(), True),
         StructField("name", StringType(), True),
-        StructField("parentStudio", StringType(), True)
-    ]), True),
+        StructField("parentStudio", IntegerType(), True)
+    ])), True),
     StructField("awards", StringType(), True),
-    StructField("contentRatings", ArrayType([
+    StructField("contentRatings", ArrayType(StructType([
         StructField("id", IntegerType(), True),
         StructField("name", StringType(), True),
         StructField("country", StringType(), True),
@@ -109,11 +86,54 @@ json_schema = StructType([
         StructField("contentType", StringType(), True),
         StructField("order", IntegerType(), True),
         StructField("fullname", StringType(), True)
-    ]), True),
+    ])), True),
     StructField("companies", StructType([
-        StructField("studio", ArrayType(company_schema), True),
+        StructField("studio", ArrayType(StructType([
+            StructField("id", IntegerType(), True),
+            StructField("name", StringType(), True),
+            StructField("slug", StringType(), True),
+            StructField("nameTranslations", StringType(), True),
+            StructField("overviewTranslations", StringType(), True),
+            StructField("aliases", StringType(), True),
+            StructField("country", StringType(), True),
+            StructField("primaryCompanyType", IntegerType(), True),
+            StructField("activeDate", StringType(), True),
+            StructField("inactiveDate", StringType(), True),
+            StructField("companyType", company_type_schema, True),
+            StructField("parentCompany", StructType([
+                StructField("id", IntegerType(), True),
+                StructField("name", StringType(), True),
+                StructField("relation", StructType([
+                    StructField("id", IntegerType(), True),
+                    StructField("typeName", StringType(), True)
+                ]), True)
+            ]), True),
+            StructField("tagOptions", StringType(), True)
+
+        ]), True)),
         StructField("network", ArrayType(StringType()), True),
-        StructField("production", ArrayType(company_schema), True),
+        StructField("production", ArrayType(StructType([
+            StructField("id", IntegerType(), True),
+            StructField("name", StringType(), True),
+            StructField("slug", StringType(), True),
+            StructField("nameTranslations", StringType(), True),
+            StructField("overviewTranslations", StringType(), True),
+            StructField("aliases", StringType(), True),
+            StructField("country", StringType(), True),
+            StructField("primaryCompanyType", IntegerType(), True),
+            StructField("activeDate", StringType(), True),
+            StructField("inactiveDate", StringType(), True),
+            StructField("companyType", company_type_schema, True),
+            StructField("parentCompany", StructType([
+                StructField("id", IntegerType(), True),
+                StructField("name", StringType(), True),
+                StructField("relation", StructType([
+                    StructField("id", IntegerType(), True),
+                    StructField("typeName", StringType(), True)
+                ]), True)
+            ]), True),
+            StructField("tagOptions", StringType(), True)
+        ]), True)),
         StructField("distributor", ArrayType(StringType()), True),
         StructField("special_effects", ArrayType(StringType()), True)
     ]), True),
