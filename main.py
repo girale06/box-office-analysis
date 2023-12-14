@@ -14,7 +14,7 @@ def load_movie_data(spark, movie_path):
 def main():
     spark = SparkSession.builder.appName("MovieRatingRanges").getOrCreate()
 
-    movie_path = "data.json"
+    movie_path = "data/data.json"
 
     movie_df = load_movie_data(spark, movie_path)
 
