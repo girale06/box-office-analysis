@@ -7,7 +7,7 @@ from schema import json_schema
 
 json_path = "data.json"
 
-spark = SparkSession.builder.appName("MovieRatingRanges").getOrCreate()
+spark = SparkSession.builder.appName("Best selling director").getOrCreate()
 
 # import json data with the predefined json schema
 json_data = spark.read.option("multiline", "true").schema(json_schema).json(json_path)
