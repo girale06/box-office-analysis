@@ -5,7 +5,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode
 from schema import json_schema
 
-json_path = "data.json"
+json_path = "../data/combined_file.json"
 
 spark = SparkSession.builder.appName("Best selling genre").getOrCreate()
 

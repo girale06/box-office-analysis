@@ -5,7 +5,7 @@ from pyspark.sql.types import DoubleType
 spark = SparkSession.builder.appName("MovieAnalysis").getOrCreate()
 
 # Load the JSON data
-json_file_path = "../data/data.json"
+json_file_path = "../data/combined_file.json"
 df = spark.read.option("multiline", "true").json(json_file_path)
 df = df.withColumn("boxOffice", col("boxOffice").cast(DoubleType()))
 
@@ -19,6 +19,8 @@ result_df = df.groupBy("year").agg(
 ).orderBy("year")
 
 result_df = result_df.withColumn("totalBoxOffice", format_number("totalBoxOffice", 2))
-result_df.show(truncate=False)
 
+max_gross_year = result_df.orderBy(col("totalBoxOffice").desc()).first()
+
+print(f"Best selling year: {max_gross_year['year']}")
 spark.stop()

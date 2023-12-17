@@ -1,11 +1,11 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, sum, format_number, count
+from pyspark.sql.functions import col, sum, format_number, count, month
 from pyspark.sql.types import DoubleType
 
 spark = SparkSession.builder.appName("MovieAnalysis").getOrCreate()
 
 # Load the JSON data
-json_file_path = "../data/data.json"
+json_file_path = "../data/combined_file.json"
 df = spark.read.option("multiline", "true").json(json_file_path)
 df = df.withColumn("boxOffice", col("boxOffice").cast(DoubleType()))
 
