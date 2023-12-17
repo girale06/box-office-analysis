@@ -145,7 +145,7 @@ json_schema = StructType([
     StructField("first_release", first_release_schema, True)
 ])
 
-json_path = "gs://cloudandbigdataproject-408414/data.json"
+json_path = "../datasets/data.json"
 
 spark = SparkSession.builder.appName("Best selling genre").getOrCreate()
 
