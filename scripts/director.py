@@ -1,8 +1,5 @@
-# Question number 2
-# Which movie director has the best selling movies?
-
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, explode
+from pyspark.sql.functions import col, explode, format_number
 from schema import json_schema
 
 json_path = "../datasets/data.json"
@@ -19,11 +16,17 @@ movies_df = json_data.withColumn("characters", explode("characters"))
 directors_df = movies_df.filter(col("characters.peopleType") == "Director")
 
 # Cast "boxOffice" to double
-directors_df_df = directors_df.withColumn("boxOffice", col("boxOffice").cast("double"))
+directors_df = directors_df.withColumn("boxOffice", col("boxOffice").cast("double"))
 
+# Group by director and sum the box office
 directors_df = directors_df.groupBy("characters.personName") \
             .agg({"boxOffice": "sum"}) \
             .withColumnRenamed("sum(boxOffice)", "total_gross")
 
-directors_df.show(truncate=False)
+# Format the total gross column
+directors_df = directors_df.withColumn("total_gross", format_number(col("total_gross"), 2))
+
+# Show all rows
+directors_df.show(n=directors_df.count(), truncate=False)
+
 spark.stop()

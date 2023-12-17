@@ -1,25 +1,110 @@
-+---------------------+-------------+
-|personName           |total_gross  |
-+---------------------+-------------+
-|Christopher McQuarrie|7.91657398E8 |
-|Kevin Lee            |1.025521689E9|
-|Jonathan Helpert     |0.0          |
-|Steven Knight        |1.14E7       |
-|Tomonori Sudou       |0.0          |
-|Fede Alvarez         |0.0          |
-|James Gunn           |1.1969766E9  |
-|Bryan Singer         |1.5136457E9  |
-|Mischa Kamp          |0.0          |
-|Joe Johnston         |1.739E8      |
-|Joe Russo            |2.048E9      |
-|Matt Johnston        |5.302E8      |
-|Jeffrey Lau          |0.0          |
-|Robin Meyers         |6.22674139E8 |
-|Robert Rodriguez     |3.951E8      |
-|Hans Petter Moland   |6.22E7       |
-|Damien Chazelle      |0.0          |
-|Ryan Coogler         |1.347597973E9|
-|Anna Boden           |5.07644E8    |
-|Jon Turteltaub       |5.302E8      |
-+---------------------+-------------+
-only showing top 20 rows
++---------------------+----------------+
+|personName           |total_gross     |
++---------------------+----------------+
+|Christopher McQuarrie|791,657,398.00  |
+|Kevin Lee            |1,025,521,689.00|
+|Jonathan Helpert     |0.00            |
+|Steven Knight        |11,400,000.00   |
+|Tomonori Sudou       |0.00            |
+|Fede Alvarez         |0.00            |
+|James Gunn           |1,196,976,600.00|
+|Bryan Singer         |1,513,645,700.00|
+|Mischa Kamp          |0.00            |
+|Joe Johnston         |173,900,000.00  |
+|Joe Russo            |2,048,000,000.00|
+|Matt Johnston        |530,200,000.00  |
+|Jeffrey Lau          |0.00            |
+|Robin Meyers         |622,674,139.00  |
+|Robert Rodriguez     |395,100,000.00  |
+|Hans Petter Moland   |62,200,000.00   |
+|Damien Chazelle      |0.00            |
+|Ryan Coogler         |1,347,597,973.00|
+|Anna Boden           |507,644,000.00  |
+|Jon Turteltaub       |530,200,000.00  |
+|Anthony Russo        |2,048,000,000.00|
+|Spike Lee            |91,500,000.00   |
+|Karyn Kusama         |0.00            |
+|Shane Black          |160,500,000.00  |
+|Scott Mosier         |511,600,000.00  |
+|Julius Avery         |41,700,000.00   |
+|Alfonso Cuarón       |4,400,000.00    |
+|Steven Caple Jr.     |214,215,889.00  |
+|James Foley          |371,000,000.00  |
+|James Madigan        |530,200,000.00  |
+|Lars von Trier       |2,500,000.00    |
+|David Gordon Green   |0.00            |
+|Steven Spielberg     |607,274,134.00  |
+|Byron Howard         |1,025,521,689.00|
+|Christine Wilson     |746,045,700.00  |
+|Ruben Fleischer      |856,100,000.00  |
+|J.A. Bayona          |1,310,000,000.00|
+|Peyton Reed          |622,674,139.00  |
+|Barry Jenkins        |20,100,000.00   |
+|Ernest Prakasa       |0.00            |
+|Matt Lee             |1,025,521,689.00|
+|Todd Strauss-Schulson|0.00            |
+|Tom Hooper           |853,983,911.00  |
+|Josie Rourke         |43,100,000.00   |
+|Sean Anders          |120,989,656.00  |
+|Tyler Perry          |0.00            |
+|Joan Carr-Wiggin     |null            |
+|Frant Gwo            |699,856,699.00  |
+|Karey Kirkpatrick    |214,100,000.00  |
+|David Yates          |1,468,899,902.00|
+|Chris Columbus       |1,857,702,366.00|
+|Taika Waititi        |853,983,911.00  |
+|Gore Verbinski       |654,300,000.00  |
+|Bradley Cooper       |251,283,389.00  |
+|Clint Eastwood       |164,000,000.00  |
+|Spiro Razatos        |856,100,000.00  |
+|Rich Moore           |1,551,821,689.00|
+|Mathew Cullen        |433,732.00      |
+|Joe Cornish          |28,500,000.00   |
+|James Wan            |1,148,528,393.00|
+|Jared Bush           |1,025,521,689.00|
+|Adam Robitel         |142,800,000.00  |
+|Susanne Bier         |0.00            |
+|Corin Hardy          |365,600,000.00  |
+|Bob Persichetti      |370,600,000.00  |
+|Marielle Heller      |11,700,000.00   |
+|Otto Bathurst        |84,800,000.00   |
+|M. Night Shyamalan   |246,100,000.00  |
+|David Leitch         |785,000,000.00  |
+|Christopher Landon   |63,300,000.00   |
+|Ron Howard           |392,900,000.00  |
+|Jennifer Lee         |1,276,000,000.00|
+|Lee Cronin           |3,400,000.00    |
+|Rick Moore           |2,301,521,689.00|
+|Rob Marshall         |349,546,142.00  |
+|Yorgos Lanthimos     |94,000,000.00   |
+|E. Chai Vasarhelyi   |0.00            |
+|Peter Farrelly       |276,700,000.00  |
+|Mike Mitchell        |191,300,000.00  |
+|Mari Wilson          |856,100,000.00  |
+|Ryan Fleck           |507,644,000.00  |
+|Yuen Woo-ping        |0.00            |
+|Genndy Tartakovsky   |0.00            |
+|Rodney Rothman       |370,600,000.00  |
+|Joss Whedon          |2,921,809,540.00|
+|Travis Knight        |467,989,645.00  |
+|Gary Ross            |297,700,000.00  |
+|Jimmy Chin           |0.00            |
+|Andy Serkis          |956,019,788.00  |
+|Brad Bird            |1,240,000,000.00|
+|Peter Jackson        |2,076,019,788.00|
+|Peter Segal          |72,300,000.00   |
+|Adam McKay           |72,000,000.00   |
+|Steve McQueen        |42,402,632.00   |
+|Peter Ramsey         |370,600,000.00  |
+|Rian Johnson         |1,330,000,000.00|
+|Aleksey Sidorov      |0.00            |
+|Dean DeBlois         |524,580,592.00  |
+|Mariana Popova       |29,300,000.00   |
+|George Lucas         |775,400,000.00  |
+|Jason Reisig         |214,100,000.00  |
+|Yarrow Cheney        |511,600,000.00  |
+|Christian Rivers     |83,200,000.00   |
+|Tatsuya Nagamine     |0.00            |
+|Kyohei Yamaguchi     |0.00            |
+|Jon Watts            |880,166,924.00  |
++---------------------+----------------+
