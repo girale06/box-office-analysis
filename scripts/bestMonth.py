@@ -4,8 +4,7 @@ from pyspark.sql.types import DoubleType
 
 spark = SparkSession.builder.appName("MovieAnalysis").getOrCreate()
 
-# Load the JSON data
-json_file_path = "../datasets/data.json"
+json_file_path = "gs://cloudandbigdataproject-408414/data.json"
 df = spark.read.option("multiline", "true").json(json_file_path)
 df = df.withColumn("boxOffice", col("boxOffice").cast(DoubleType()))
 

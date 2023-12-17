@@ -49,9 +49,22 @@ $ source ~/.profile
 The folders scripts and data can be created manually and copy the datasets and scripts to the corresponding ones, although it is also possible to download this repository and unzip it, by Download ZIP. 
 To download the full dataset go to this site https://console.cloud.google.com/storage/browser/cloudandbigdataproject-408414;tab=objects?forceOnBucketsSortingFiltering=false&authuser=1&project=cloudandbigdataproject-408414&prefix=&forceOnObjectsSortingFiltering=false and write to sdobrev@ucm.es with your mail to get access.
 
-5. **Script execution**
-Placed in the /scripts folder we give the command to Spark to execute the program.
+5. **On Cloud**
+Put everything in a Cloud Bucket and create a cluster by running the following code
 ```
-$ spark-submit bestMonth.py
+gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway
+```
+Than submit the PySpack job(your_script.py is the script you want to run!)
+```
+gcloud dataproc jobs submit pyspark \
+  --cluster=example-cluster \
+  --region=europe-west6 \
+  --jars=gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar \
+  gs://cloudandbigdataproject-408414/your_script.py
+
 ```
 The result will be shown.
+CPU Usage for the script for Best Year:
+![Alt text](</pictures/CPU utilizationbestYear.png>)
+CPU Usage for the script for Best Month:
+![Alt text](</pictures/CPU utilizationbestMonth.png>)
