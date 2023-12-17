@@ -68,3 +68,7 @@ CPU Usage for the script for Best Year:
 ![Alt text](</pictures/CPU utilizationbestYear.png>)
 CPU Usage for the script for Best Month:
 ![Alt text](</pictures/CPU utilizationbestMonth.png>)
+CPU Usage for the script for Best Directors:
+![Alt text](</pictures/CPU utilizationdirectors.png.png>)
+CPU Usage for the script for Best Genres:
+![Alt text](</pictures/CPU utilizationGenres.png.png>)
