@@ -1,0 +1,25 @@
++---------------------+-------------+
+|personName           |total_gross  |
++---------------------+-------------+
+|Christopher McQuarrie|7.91657398E8 |
+|Kevin Lee            |1.025521689E9|
+|Jonathan Helpert     |0.0          |
+|Steven Knight        |1.14E7       |
+|Tomonori Sudou       |0.0          |
+|Fede Alvarez         |0.0          |
+|James Gunn           |1.1969766E9  |
+|Bryan Singer         |1.5136457E9  |
+|Mischa Kamp          |0.0          |
+|Joe Johnston         |1.739E8      |
+|Joe Russo            |2.048E9      |
+|Matt Johnston        |5.302E8      |
+|Jeffrey Lau          |0.0          |
+|Robin Meyers         |6.22674139E8 |
+|Robert Rodriguez     |3.951E8      |
+|Hans Petter Moland   |6.22E7       |
+|Damien Chazelle      |0.0          |
+|Ryan Coogler         |1.347597973E9|
+|Anna Boden           |5.07644E8    |
+|Jon Turteltaub       |5.302E8      |
++---------------------+-------------+
+only showing top 20 rows

@@ -1,0 +1,23 @@
++---------------+---------------+
+|name           |total_gross    |
++---------------+---------------+
+|Crime          |6.27836364E8   |
+|Romance        |1.819259989E9  |
+|Thriller       |2.103693762E9  |
+|Adventure      |2.5376632871E10|
+|Drama          |3.386981997E9  |
+|War            |1.12E9         |
+|Documentary    |0.0            |
+|Family         |8.670350691E9  |
+|Fantasy        |1.4619910642E10|
+|History        |1.371E8        |
+|Mystery        |1.308502366E9  |
+|Suspense       |7.460457E8     |
+|Musical        |2.294883389E9  |
+|Animation      |5.880002281E9  |
+|Science Fiction|2.0357547658E10|
+|Horror         |1.3075E9       |
+|Comedy         |5.066515537E9  |
+|Children       |1.276E9        |
+|Action         |2.4454805056E10|
++---------------+---------------+

@@ -5,7 +5,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode
 from schema import json_schema
 
-json_path = "../data/combined_file.json"
+json_path = "../datasets/data.json"
 
 spark = SparkSession.builder.appName("Best selling genre").getOrCreate()
 
@@ -23,7 +23,5 @@ genres_df = movies_df.groupBy("genres.name") \
             .agg({"boxOffice": "sum"}) \
             .withColumnRenamed("sum(boxOffice)", "total_gross")
 
-# Get the genre with the highest total gross
-max_gross_genre = genres_df.orderBy(col("total_gross").desc()).first()
-
-print(f"Genre with the best selling movies: {max_gross_genre['name']}")
+genres_df.show(truncate=False)
+spark.stop()

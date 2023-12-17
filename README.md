@@ -13,13 +13,13 @@ We acquired the data using their API. After receiving an API key and making a 10
 
 ## 4. Description of the solution.
 ### Software
-The following scripts have been developed in Python and a brief description of them is provided. By clicking on its name you can see the code, located in the scripts folder.
+The following scripts have been developed in Python and a brief description of them is provided. By clicking on its name you can see the code, located in the scripts folder. (Disclaimer: The scripts are made for data.json! If you want to run them for the full dataset you have to delete the delete the small data and rename the full dataset to data.json or change the path inside the code)
 - [**bestMonth.py**](/scripts/bestMonth.py): A graph is obtained with all months, how many movies are released that month and which month has the best revenue. This will show us which month is most profitable to release the movie in.
 - [**bestYear.py**](/scripts/bestYear.py): We obtain the most profitable year in all times. Using this we can make some predictions about the upcoming years.
 - [**director.py**](/scripts/director.py): Shows which movie director has the most revenue. This way we can see who is the most successful director.
 - [**genre.py**](/scripts/genre.py): The program shows which are the most popular genres, through the number of revenue made on these movies to make it easier for directors to choose a genre for their next movie that can be successful among the public.
 - [**schema.py**](/scripts/schema.py): Here we use schema for the JSON file.It enables applications to validate data, ensuring it meets the defined criteria. With JSON Schema, we can make our JSON more readable, enforce data validation, and improve interoperability across different programming languages.
-
+- in **Folder Results** you can find the test ran data.json which has small number of movies.
 ### Tools and work environment
 To develop our study, we have used the following tools and technologies:
 1. **Google Cloud**, for the execution of the scripts, storage and data management.
@@ -47,6 +47,7 @@ $ source ~/.profile
 ```
 4. **File download**
 The folders scripts and data can be created manually and copy the datasets and scripts to the corresponding ones, although it is also possible to download this repository and unzip it, by Download ZIP. 
+To download the full dataset go to this site https://console.cloud.google.com/storage/browser/cloudandbigdataproject-408414;tab=objects?forceOnBucketsSortingFiltering=false&authuser=1&project=cloudandbigdataproject-408414&prefix=&forceOnObjectsSortingFiltering=false and write to sdobrev@ucm.es with your mail to get access.
 
 5. **Script execution**
 Placed in the /scripts folder we give the command to Spark to execute the program.
